@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: config-service
-          image: config-service
-          imagePullPolicy: IfNotPresent
+          image: docker.io/gompangii/config-service
+          imagePullPolicy: Always
           lifecycle:
             preStop:
               exec:
