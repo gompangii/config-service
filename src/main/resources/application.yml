@@ -19,6 +19,12 @@ spring:
           timeout: 5
           clone-on-start: true
           force-pull: true
+logging:
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
+info:
+  system: Polar Bookshop
 
 management:
   endpoints:
