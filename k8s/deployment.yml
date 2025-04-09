@@ -21,7 +21,7 @@ spec:
       containers:
         - name: config-service
           image: docker.io/gompangii/config-service
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           lifecycle:
             preStop:
               exec:
@@ -30,7 +30,7 @@ spec:
             - containerPort: 8888
           env:
             - name: JAVA_OPTS
-              value: "-Xms256m -Xmx512m"
+              value: "-Xms128m -Xmx256m"
             - name: BPL_JVM_THREAD_COUNT
               value: "50"
           livenessProbe:
